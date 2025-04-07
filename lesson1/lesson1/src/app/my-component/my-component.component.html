@@ -1,0 +1,30 @@
+<!-- Two-Way Binding (eng yuqorida) -->
+<div class="mb-3">
+    <input [(ngModel)]="name" class="form-control" placeholder="Enter your name">
+    <p class="mt-2">Hello, {{ name }}!</p>
+  </div>
+  
+  <!-- Interpolation -->
+  <h3>{{ title }}</h3>
+  <p>{{ message }}</p>
+  
+  <!-- Event Binding -->
+  <button class="btn btn-primary mb-3" (click)="onClick()">Toggle Visibility</button>
+  
+  <!-- Structural Directives -->
+  @if (isVisible) {
+    <div class="alert alert-info">
+      This is visible!
+    </div>
+  }
+  
+  <ul class="list-group mb-3">
+    @for (item of items; track item) {
+      <li class="list-group-item">{{ item }}</li>
+    }
+  </ul>
+  
+  <!-- Attribute Directives -->
+  <div [ngClass]="{'active': isActive}" class="p-3 w-100">
+    This div has a dynamic class!
+  </div>
